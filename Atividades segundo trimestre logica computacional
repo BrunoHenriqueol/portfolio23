@@ -1,0 +1,44 @@
+opa jackson ent, eu n lembro como q mexe no git hub e n sei mais como coloco uma imagem ent vou falar por aqui :)
+
+Atividade do dia 10/06 sobre vetores e Arraylist e esse era o codigo
+
+package javaapplication;
+
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
+public class javaapplication1 {
+    
+    public static void main(string[]  args) {
+    ArrayList<string> s=new ArrayList ();
+    int preco1=integer.parceInt(JOptionPane.showImputDialog(``digite o primeiro preco``));
+    int preco2=integer.parceInt(JOptionPane.showImputDialog(``digite o segundo preco``));
+    int preco3=integer.parceInt(JOptionPane.showImputDialog(``digite o terceiro preco``));
+    int preco4=integer.parceInt(JOptionPane.showImputDialog(``digite o quarto preco``));
+    
+    E nessa outra atividade tivemos que analizar o codigo, ver os erros e corigilo e aqui esta:
+    import javax.swing.JOptionPane;
+
+public class Rec_Corrigida {
+
+  public static void main(String[] args) {
+    String nome = JOptionPane.showInputDialog(null, "Digite seu nome.");
+    int idade = Integer.parseInt(JOptionPane.showInputDialog(null, nome + " qual a sua idade?"));
+    if (idade <= 18) {
+      JOptionPane.showMessageDialog(null, nome + " você é menor de idade ein! não vá aprontar!");
+    } else {
+      JOptionPane.showMessageDialog(null, nome + " você é maior de idade, agora mesmo que não pode aprontar ein!");
+    }
+    if (idade % 2 == 0) {
+      JOptionPane.showMessageDialog(null, nome + " a sua idade é par");
+    } else {
+      JOptionPane.showMessageDialog(null, nome + " a sua idade é ímpar");
+    }
+    int i = -1;
+    while (i != idade) {
+      JOptionPane.showInputDialog(null, nome + " quantos anos você disse que tem mesmo?");
+    i++;
+    }
+    JOptionPane.showMessageDialog(null, "Muito bem!!");
+  }
+}
