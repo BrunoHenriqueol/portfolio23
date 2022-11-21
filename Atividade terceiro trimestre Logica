@@ -1,0 +1,117 @@
+package consumo.médio;
+
+import java.util.Scanner;
+
+public class ConsumoMédio {
+
+   
+    public static void main(String[] args) {
+        
+        Scanner pet = new java.util.Scanner(System.in);
+        
+        System.out.println("escreva a distância percorrida pelo automóvel");
+        float distancia = pet.nextFloat();
+        System.out.println("Digite o total de combustível gasto");
+        float combustivel = pet.nextFloat();
+        float media = distancia/combustivel;
+        
+        System.out.println("O  combustível gasto é de: "+media+" Km/l");
+        
+    }
+    
+}
+
+
+atv 2
+package media;
+
+import java.util.Scanner;
+
+
+public class Media {
+
+   
+    public static void main(String[] args) {
+       
+        Scanner pet = new java.util.Scanner(System.in);
+        
+        System.out.println("Digite seu nome");
+        String aluno = pet.next();
+        System.out.println("Digite sua primeira nota");
+        float nota1 = pet.nextFloat();
+        System.out.println("Digite sua segunda nota");
+        float nota2 = pet.nextFloat();
+        System.out.println("Digite sua terceira nota");
+        float nota3 = pet.nextFloat();
+        
+        float media = (nota1+nota2+nota3)/3;
+        
+        if (media>=6){
+            System.out.println("Olá "+aluno+" sua media foi: "+media+". Parabéns você passou.");
+    }
+        else{
+            System.out.println("Olá "+aluno+" sua media foi: "+media+".reprovou, estude mais.");
+        }
+        
+    }
+    
+}
+
+atv 3
+package temperatura;
+
+import java.util.Scanner;
+
+public class Temperatura {
+
+  
+    public static void main(String[] args) {
+        
+        Scanner pet = new java.util.Scanner(System.in);
+        
+        System.out.println("Digite o valor que você quer mudar");
+        int valor = pet.nextInt();
+        System.out.println("Digite 1 para transformar de Celsus para Fahrenhei ou, digite 2 para transformar Fahrenhei em Celsius");
+        int decisao = pet.nextInt();
+       
+        if (decisao == 1){
+            int transformaçao = (valor *(9/5))+32;
+            System.out.println(+transformaçao+"  °F");       
+        }
+        else{
+            int transformaçao = (valor - 32)*(5/9);
+            System.out.println(+transformaçao+" °C");
+        }
+    }
+    
+}
+
+atv 4
+
+package vendedor;
+
+import java.util.Scanner;
+
+
+public class Vendedor {
+
+    
+    public static void main(String[] args) {
+        
+        Scanner pet = new java.util.Scanner(System.in);
+        
+        System.out.println("Digite seu nome");
+        String nome = pet.next();
+        System.out.println("Digite suas vendas em reais");
+        float vendas = pet.nextFloat();
+        System.out.println("Digite seu salário fixo");
+        float salario = entrada.nextFloat(); 
+        float comissao = (vendas/100)*15;
+        float total = salario+comissao;
+        
+        System.out.println("Olá "+nome+" seu salário fixo é de: "+salario+" e você vai ganhar: R$ "+comissao+" somando no final do mês: R$ "+total);
+        
+        
+    }
+    
+}
