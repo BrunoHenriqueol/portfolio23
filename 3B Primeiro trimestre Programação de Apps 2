@@ -1,0 +1,63 @@
+Nessa atividade tivemos que criar um Tutorial mostrando passo a passo de como realizar o procedimento de acessar a câmera do celular, tirar uma foto e colocar na tela do app android.
+
+Etapa 1: configurar seu ambiente Android
+Antes de poder acessar a câmera em seu telefone Android, você precisa configurar seu ambiente de desenvolvimento. Isso inclui a instalação do Android Studio e a criação de um novo projeto. Depois de configurar seu projeto, você pode começar a trabalhar no código para acessar a câmera.
+
+Etapa 2: adicionar permissões ao manifesto do Android
+Para acessar a câmera em um dispositivo Android, você precisa adicionar as permissões necessárias ao arquivo AndroidManifest.xml do seu aplicativo. Você pode fazer isso adicionando as seguintes linhas de código ao arquivo de manifesto:
+
+
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-feature android:name="android.hardware.camera" />
+
+Etapa 3: crie um layout para a tela do seu aplicativo
+Em seguida, você precisa criar um layout para a tela do seu aplicativo que irá exibir a imagem capturada pela câmera. Você pode usar o seguinte código XML para criar um layout básico:
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Take Picture"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>
+
+Etapa 4: adicionar código para acessar a câmera
+Agora é hora de adicionar o código para acessar a câmera e capturar uma imagem. Aqui está o código que você pode usar:
+]
+private static final int CAMERA_REQUEST = 1888;
+private ImageView imageView;
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+
+    imageView = findViewById(R.id.imageView);
+    Button button = findViewById(R.id.button);
+
+    button.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivityForResult(cameraIntent, CAMERA_REQUEST);
+        }
+    });
+}
+
+protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    if (requestCode == CAMERA_REQUEST && resultCode == RESULT_OK) {
+        Bitmap photo = (Bitmap) data.getExtras().get("data");
+        imageView.setImageBitmap(photo);
+    }
+}
