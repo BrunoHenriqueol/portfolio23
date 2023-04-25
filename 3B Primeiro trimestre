@@ -1,0 +1,11 @@
+public void cadastro(View V){
+     String Login =novologin.getText().toString();
+     String Senha =novaSenha.getText().toString();
+     String conf =confirmação.getText()toString();
+     if(senha.equal(conf)){
+         Usuario U =new usuario(Login, senha admin:false);
+         listinha.add(U)
+}
+else{
+     Toast.makeText (Context this, text:"as senhas não conferem.", toast.LENGTH_LONG)show()
+}//Bruno Henrique
