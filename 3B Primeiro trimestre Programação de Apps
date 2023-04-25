@@ -1,3 +1,5 @@
+nessa atividade tivemos que colocar nosso nome no final desse comando feito em aula, Ex : }//feito por Bruno
+
 public void cadastro(View V){
      String Login =novologin.getText().toString();
      String Senha =novaSenha.getText().toString();
