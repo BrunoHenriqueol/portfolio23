@@ -1,0 +1,9 @@
+Nessa atividade tivemos que criar um documento e entregar em PDF sobre o tipo de teste escolhido em aula, com sua definição e um exemplo de uso.
+O que peguei foi teste unitario,
+O que é:
+Um teste unitário é o teste da menor parte testável de um
+programa. Se você programa em uma linguagem que suporte
+paradigma funcional.
+Exemplo:
+A menor parte testável do seu código deve ser uma função. Então
+um teste unitário seria o teste de qualquer função.
